@@ -5,7 +5,7 @@ import Particles, { initParticlesEngine } from "@tsparticles/react"
 import type { Container, SingleOrMultiple } from "@tsparticles/engine"
 import { loadSlim } from "@tsparticles/slim"
 import { cn } from "@/lib/utils"
-import { motion, useAnimation } from "motion/react"
+import { motion, useAnimation } from "framer-motion"
 
 type ParticlesProps = {
   id?: string
@@ -260,8 +260,8 @@ export const SparklesCore = (props: ParticlesProps) => {
               },
               size: {
                 value: {
-                  min: minSize || 1,
-                  max: maxSize || 3,
+                  min: minSize || 1,\
+                  maxSize || 3,
                 },
                 animation: {
                   count: 0,
