@@ -1,40 +1,45 @@
-import { HoverEffect } from "./ui/card-hover-effect";
+import { HoverEffect } from "./ui/card-hover-effect"
 
-export default function CardHoverEffectDemo() {
+export default function Apps() {
   return (
-    <div className="max-w-5xl mx-auto ">
+    <div className="max-w-6xl mx-auto">
       <HoverEffect items={projects} />
     </div>
-  );
+  )
 }
+
 export const projects = [
   {
-    title: "Stripe",
+    title: "Photo Editor Pro",
     description:
-      "A technology company that builds economic infrastructure for the internet.",
-    link: "https://stripe.com",
+      "A powerful photo editing app with advanced filters, effects, and tools for professional-quality edits on mobile.",
+    link: "#",
     image:
-      "https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D", // Replace with actual image URLs
+      "https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D",
   },
   {
-    title: "Netflix",
+    title: "Video Creator",
     description:
-      "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
-    link: "https://netflix.com",
-    image: "https://via.placeholder.com/200", // Replace with actual image URLs
+      "Create stunning videos with our easy-to-use video editor featuring transitions, effects, and music integration.",
+    link: "#",
+    image:
+      "https://images.unsplash.com/photo-1621155346337-1d19476ba7d6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    title: "Google",
+    title: "Camera Plus",
     description:
-      "A multinational technology company that specializes in Internet-related services and products.",
-    link: "https://google.com",
-    image: "https://via.placeholder.com/200", // Replace with actual image URLs
+      "Advanced camera app with manual controls, RAW support, and professional-grade features for mobile photography.",
+    link: "#",
+    image:
+      "https://images.unsplash.com/photo-1488372759477-a7f4aa078cb6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    title: "Meta",
+    title: "Story Maker",
     description:
-      "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
-    link: "https://meta.com",
-    image: "https://via.placeholder.com/200", // Replace with actual image URLs
+      "Create engaging social media stories with templates, animations, and creative tools for maximum impact.",
+    link: "#",
+    image:
+      "https://images.unsplash.com/photo-1595147389795-37094173bfd8?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
-];
+]
+

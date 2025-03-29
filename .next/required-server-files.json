@@ -7,14 +7,14 @@
       "ignoreDuringBuilds": true
     },
     "typescript": {
-      "ignoreBuildErrors": false,
+      "ignoreBuildErrors": true,
       "tsconfigPath": "tsconfig.json"
     },
     "distDir": ".next",
     "cleanDistDir": true,
     "assetPrefix": "",
     "cacheMaxMemorySize": 52428800,
-    "configOrigin": "next.config.ts",
+    "configOrigin": "next.config.mjs",
     "useFileSystemPublicRoutes": true,
     "generateEtags": true,
     "pageExtensions": [
@@ -49,9 +49,7 @@
       "path": "/_next/image",
       "loader": "default",
       "loaderFile": "",
-      "domains": [
-        "via.placeholder.com"
-      ],
+      "domains": [],
       "disableStaticImages": false,
       "minimumCacheTTL": 60,
       "formats": [
@@ -61,7 +59,7 @@
       "contentSecurityPolicy": "script-src 'none'; frame-src 'none'; sandbox;",
       "contentDispositionType": "attachment",
       "remotePatterns": [],
-      "unoptimized": false
+      "unoptimized": true
     },
     "devIndicators": {
       "position": "bottom-left"
@@ -181,10 +179,11 @@
       },
       "typedRoutes": false,
       "typedEnv": false,
-      "parallelServerCompiles": false,
-      "parallelServerBuildTraces": false,
+      "parallelServerCompiles": true,
+      "parallelServerBuildTraces": true,
       "ppr": false,
       "authInterrupts": false,
+      "webpackBuildWorker": true,
       "webpackMemoryOptimizations": false,
       "optimizeServerReact": true,
       "useEarlyImport": false,
@@ -281,7 +280,7 @@
     },
     "htmlLimitedBots": "Mediapartners-Google|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview",
     "bundlePagesRouterDependencies": false,
-    "configFileName": "next.config.ts"
+    "configFileName": "next.config.mjs"
   },
   "appDir": "/home/shaxzodbr/Desktop/Akbarfirma/AkbarCompany",
   "relativeAppDir": "",

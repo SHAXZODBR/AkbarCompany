@@ -1,5 +1,8 @@
-import { cn } from "@/lib/utils"; // Ensure this path is correct
-import { AnimatePresence, motion } from "framer-motion"; // Correct import for framer-motion
+"use client";
+import { cn } from "@/lib/utils";
+import type React from "react";
+
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -20,7 +23,7 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 bg-white ",
+        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 md:gap-10",
         className
       )}
     >
@@ -40,11 +43,11 @@ export const HoverEffect = ({
                 initial={{ opacity: 0 }}
                 animate={{
                   opacity: 1,
-                  transition: { duration: 0.15 },
+                  transition: { duration: 0.4 },
                 }}
                 exit={{
                   opacity: 0,
-                  transition: { duration: 0.15, delay: 0.2 },
+                  transition: { duration: 0.5, delay: 0 },
                 }}
               />
             )}
@@ -52,9 +55,9 @@ export const HoverEffect = ({
           <Card>
             <div className="relative">
               <img
-                src={item.image}
+                src={item.image || "/placeholder.svg"}
                 alt={item.title}
-                className="w-full h-32 object-cover rounded-xl mb-4"
+                className="w-full h-48 object-cover rounded-xl mb-6"
               />
               <CardTitle>{item.title}</CardTitle>
               <CardDescription>{item.description}</CardDescription>
@@ -76,7 +79,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+        "rounded-2xl h-full w-full p-6 overflow-hidden bg-neutral-900 dark:bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
         className
       )}
     >
@@ -95,7 +98,12 @@ export const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h4 className={cn("text-zinc-100 font-bold tracking-wide mt-4", className)}>
+    <h4
+      className={cn(
+        "text-zinc-100 font-bold tracking-wide text-xl mb-2",
+        className
+      )}
+    >
       {children}
     </h4>
   );
@@ -111,7 +119,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm",
+        "mt-4 text-zinc-400 tracking-wide leading-relaxed text-base",
         className
       )}
     >

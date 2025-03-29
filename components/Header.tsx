@@ -1,41 +1,50 @@
-"use client";
-import React from "react";
-import { FloatingNav } from "./ui/floating-navbar";
-import { SparklesCore } from "./ui/sparkles";
-import { Cover } from "@/components/ui/cover";
+"use client"
+import { FloatingNav } from "./ui/floating-navbar"
+import { SparklesCore } from "./ui/sparkles"
+import { Cover } from "@/components/ui/cover"
 
-import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
-export default function FloatingNavDemo() {
+import { IconHome, IconMessage, IconUser, IconPhoto, IconApps } from "@tabler/icons-react"
+
+export default function Header() {
   const navItems = [
     {
       name: "Home",
-      link: "/",
-      icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      link: "#home",
+      icon: <IconHome className="h-5 w-5 text-neutral-500 dark:text-white" />,
+    },
+    {
+      name: "Our Apps",
+      link: "#apps",
+      icon: <IconApps className="h-5 w-5 text-neutral-500 dark:text-white" />,
     },
     {
       name: "About",
-      link: "/about",
-      icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      link: "#about",
+      icon: <IconUser className="h-5 w-5 text-neutral-500 dark:text-white" />,
+    },
+    {
+      name: "Gallery",
+      link: "#gallery",
+      icon: <IconPhoto className="h-5 w-5 text-neutral-500 dark:text-white" />,
     },
     {
       name: "Contact",
-      link: "/contact",
-      icon: (
-        <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />
-      ),
+      link: "#contact",
+      icon: <IconMessage className="h-5 w-5 text-neutral-500 dark:text-white" />,
     },
-  ];
+  ]
   return (
-    <div className="relative   w-full">
+    <div id="home" className="relative w-full">
       <FloatingNav navItems={navItems} />
-      <SparklesPreview />
+      <SparklesHeader />
     </div>
-  );
+  )
 }
-export function SparklesPreview() {
+
+export function SparklesHeader() {
   return (
-    <div className="h-screen relative w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
-      <div className="w-full absolute inset-0 h-screen">
+    <div className="h-screen relative w-full bg-black flex flex-col items-center justify-center overflow-hidden">
+      <div className="w-full absolute inset-0 h-full">
         <SparklesCore
           id="tsparticlesfullpage"
           background="transparent"
@@ -46,9 +55,15 @@ export function SparklesPreview() {
           particleColor="#FFFFFF"
         />
       </div>
-      <h1 className="text-4xl md:text-4xl lg:text-6xl font-semibold max-w-7xl mx-auto text-center mt-6 relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-100 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
-        Build amazing websites <br /> at <Cover>warp speed</Cover>
-      </h1>
+      <div className="relative z-20 text-center px-6 md:px-10 max-w-5xl mx-auto">
+        <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-100 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white leading-tight mb-6">
+          Build amazing websites <br /> at <Cover>warp speed</Cover>
+        </h1>
+        <p className="text-lg md:text-xl text-gray-300 mt-6 max-w-2xl mx-auto">
+          Creating exceptional mobile experiences with passion and innovation
+        </p>
+      </div>
     </div>
-  );
+  )
 }
+
