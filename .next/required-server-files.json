@@ -96,7 +96,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "/home/shaxzodbr/Desktop/Akbarfirma/AkbarCompany",
+    "outputFileTracingRoot": "/home/shakhzodbr/Desktop/AkbarCompany",
     "experimental": {
       "allowedDevOrigins": [],
       "nodeMiddleware": false,
@@ -175,7 +175,7 @@
       "forceSwcTransforms": false,
       "largePageDataBytes": 128000,
       "turbo": {
-        "root": "/home/shaxzodbr/Desktop/Akbarfirma/AkbarCompany"
+        "root": "/home/shakhzodbr/Desktop/AkbarCompany"
       },
       "typedRoutes": false,
       "typedEnv": false,
@@ -282,7 +282,7 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.mjs"
   },
-  "appDir": "/home/shaxzodbr/Desktop/Akbarfirma/AkbarCompany",
+  "appDir": "/home/shakhzodbr/Desktop/AkbarCompany",
   "relativeAppDir": "",
   "files": [
     ".next/routes-manifest.json",
