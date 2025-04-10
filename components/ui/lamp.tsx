@@ -102,4 +102,3 @@ export const LampContainer = ({
     </div>
   )
 }
-

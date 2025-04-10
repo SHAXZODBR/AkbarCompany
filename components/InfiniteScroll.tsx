@@ -51,4 +51,3 @@ const imageItems = [
     alt: "App Screenshot 5",
   },
 ]
-

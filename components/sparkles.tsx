@@ -260,8 +260,8 @@ export const SparklesCore = (props: ParticlesProps) => {
               },
               size: {
                 value: {
-                  min: minSize || 1,\
-                  maxSize || 3,
+                  min: minSize || 1,
+                  max: maxSize || 3,
                 },
                 animation: {
                   count: 0,
@@ -423,4 +423,3 @@ export const SparklesCore = (props: ParticlesProps) => {
     </motion.div>
   )
 }
-
